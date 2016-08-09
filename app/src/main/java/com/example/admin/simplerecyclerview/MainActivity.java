@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         mArrayStr.add("Mike");
         mArrayStr.add("Karles");
 
-        mAdapter = new simpleAdapter(mArrayStr);
+        mAdapter = new simpleAdapter(getApplicationContext(),mArrayStr);
 
         mRecyclerview = (RecyclerView) findViewById(R.id.a_main_recycler);
         mRecyclerview.setAdapter(mAdapter);
