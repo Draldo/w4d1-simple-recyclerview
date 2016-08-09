@@ -1,6 +1,7 @@
 package com.example.admin.simplerecyclerview;
 
 import android.content.Context;
+import android.support.design.widget.Snackbar;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -75,7 +76,7 @@ public class simpleAdapter extends RecyclerView.Adapter<simpleAdapter.ViewHolder
                 if(isLongClick){
                     Toast.makeText(mContext, mArrayStr.get(position) + " (Long click)", Toast.LENGTH_SHORT).show();
                 } else {
-                    Toast.makeText(mContext, mArrayStr.get(position), Toast.LENGTH_SHORT).show();
+                    Snackbar.make(view, mArrayStr.get(position), Snackbar.LENGTH_SHORT).show();
                 }
             }
         });
